@@ -1,0 +1,136 @@
+/* ---- RESET/BASIC STYLING ---- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .board {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  /* ---- FORM ---- */
+  #todo-form {
+    padding: 32px 32px 0;
+  }
+  
+  #todo-form input {
+    padding: 12px;
+    margin-right: 12px;
+    width: 225px;
+  
+    border-radius: 4px;
+    border: none;
+  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background: white;
+  
+    font-size: 14px;
+    outline: none;
+  }
+  #clear{
+    max-width: fit-content;
+  }
+  #todo-form button,#clear {
+    padding: 12px 32px;
+  
+    border-radius: 4px;
+    border: none;
+  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background: #ffffff;
+    color: black;
+  
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .function{
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  
+  
+  /* ---- BOARD ---- */
+  .lanes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 16px;
+    padding: 24px 32px;
+    overflow: scroll;
+    height: 100%;
+  }
+.notst{
+  font-size: 30px;
+  background-color: rgba(207, 108, 108, 0.518);
+  max-width: fit-content;
+}
+.Inpr{
+  font-size: 30px;
+  background-color: rgba(225, 180, 97, 0.523);
+  max-width: fit-content;
+}
+.Completed{
+  font-size: 30px;
+  background-color: rgba(117, 224, 117, 0.393);
+  max-width: fit-content;
+}
+p{
+  border-radius: 4px;
+}
+  
+  .swim-lane {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px; 
+    width: 225px;
+    min-height: 120px;
+    flex-shrink: 0;
+  }
+  
+  .task {
+    background: white;
+    color: black;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  
+    font-size: 26px;
+    cursor: move;
+  }
+  @media only screen and (max-width:960px){
+    .board{
+        display: flex;
+        flex-direction: column;
+    }
+    .lanes{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+  .is-dragging {
+    scale: 1.05;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background: rgb(50, 50, 50);
+    color: white;
+  }
